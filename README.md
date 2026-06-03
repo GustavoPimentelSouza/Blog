@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meu Blog
 
-## Getting Started
+Blog pessoal desenvolvido com Next.js 16, TypeScript e Tailwind CSS. Conta com área administrativa protegida para gerenciamento de posts.
 
-First, run the development server:
+## Tecnologias
 
+- **Next.js 16** — App Router, Server Components, Server Actions
+- **TypeScript** — tipagem estática
+- **Tailwind CSS v4** — estilização
+- **Drizzle ORM** — acesso ao banco de dados
+- **SQLite** — banco de dados local
+- **NextAuth v5** — autenticação
+- **Vitest** — testes unitários
+
+## Funcionalidades
+
+- Listagem de posts com post em destaque
+- Página individual de cada post
+- Dark mode automático (segue o sistema operacional)
+- Open Graph para compartilhamento em redes sociais
+- Sitemap para indexação no Google
+- Botões de compartilhamento (WhatsApp, Twitter, copiar link)
+- Área administrativa com autenticação
+- CRUD completo de posts (criar, editar, deletar, publicar/despublicar)
+- Testes unitários
+
+## Como rodar localmente
+
+**1. Clone o repositório**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/GustavoPimentelSouza/Blog.git
+cd Blog
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Instale as dependências**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**3. Configure as variáveis de ambiente**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Crie um arquivo `.env.local` na raiz do projeto:
+```env
+AUTH_SECRET=sua_chave_secreta_aqui
+NEXT_PUBLIC_BASE_URL=http://localhost:3001
+ADMIN_EMAIL=seu_email@exemplo.com
+ADMIN_PASSWORD=sua_senha
+```
 
-## Learn More
+Para gerar o `AUTH_SECRET`:
+```bash
+openssl rand -base64 32
+```
 
-To learn more about Next.js, take a look at the following resources:
+**4. Crie o banco de dados**
+```bash
+npx drizzle-kit migrate
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**5. Popule o banco com os posts iniciais**
+```bash
+npm run db:seed
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**6. Crie o usuário administrador**
+```bash
+npm run db:seed-admin
+```
 
-## Deploy on Vercel
+**7. Inicie o servidor**
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Acesse [http://localhost:3001](http://localhost:3001)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A área administrativa fica em [http://localhost:3001/admin/login](http://localhost:3001/admin/login)
+
+## Testes
+
+```bash
+npm test
+```
+
+## Estrutura do projeto
+
+```
+src/
+  actions/        # Server Actions
+  components/     # Componentes React
+  db/             # Configuração do banco, migrations e seeds
+  lib/            # Auth e queries
+  models/         # Tipos e modelos
+  repositories/   # Camada de acesso a dados
+  tests/          # Testes unitários
+  utils/          # Funções utilitárias
+app/
+  admin/          # Área administrativa
+  post/           # Páginas de posts
+  sobre/          # Página sobre
+```

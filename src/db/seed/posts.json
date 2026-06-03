@@ -1,0 +1,112 @@
+{
+  "posts": [
+    {
+      "id": "99f8add4-7684-4c16-a316-616271db199e",
+      "title": "Rotina matinal de pessoas altamente eficazes",
+      "slug": "rotina-matinal-de-pessoas-altamente-eficazes",
+      "excerpt": "O Next.js também é uma boa escolha para quem quer se preocupar com performance e SEO.",
+      "content": "O Next.js também é uma boa escolha para quem quer se preocupar com performance e SEO.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1484627147104-f5197bcd6651?w=800&q=80",
+      "published": true,
+      "createdAt": "2025-04-08T00:24:38.616Z",
+      "updatedAt": "2025-04-08T00:33:56.907Z",
+      "author": "Isabela Nunes"
+    },
+    {
+      "id": "afa086e4-53e4-492d-acf2-7c2966d83fcd",
+      "title": "Dicas para manter a saúde mental em dia",
+      "slug": "dicas-para-manter-a-saude-mental-em-dia",
+      "excerpt": "Em vez de configurar tudo manualmente, basta criar um arquivo com o nome certo e o Next.js entende que aquilo representa uma página.",
+      "content": "Em vez de configurar tudo manualmente, basta criar um arquivo com o nome certo e o Next.js entende que aquilo representa uma página.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+      "published": true,
+      "createdAt": "2025-04-07T00:24:38.616Z",
+      "updatedAt": "2025-04-07T00:33:56.907Z",
+      "author": "Marina Duarte"
+    },
+    {
+      "id": "1b6a5f57-8a19-4933-91f4-1af678464ded",
+      "title": "Como a escrita pode mudar sua carreira",
+      "slug": "como-a-escrita-pode-mudar-sua-carreira",
+      "excerpt": "Muitas empresas e desenvolvedores individuais escolhem o Next.js justamente porque ele consegue unir simplicidade com recursos avançados.",
+      "content": "Muitas empresas e desenvolvedores individuais escolhem o Next.js justamente porque ele consegue unir simplicidade com recursos avançados.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
+      "published": true,
+      "createdAt": "2025-04-06T00:24:38.616Z",
+      "updatedAt": "2025-04-06T00:33:56.907Z",
+      "author": "Pedro Martins"
+    },
+    {
+      "id": "6b204dab-2312-4525-820a-a0463560835f",
+      "title": "Como a tecnologia impacta nosso bem-estar",
+      "slug": "como-a-tecnologia-impacta-nosso-bem-estar",
+      "excerpt": "Também ajuda a organizar melhor os arquivos e componentes, o que facilita a manutenção do projeto no longo prazo.",
+      "content": "Também ajuda a organizar melhor os arquivos e componentes, o que facilita a manutenção do projeto no longo prazo.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+      "published": false,
+      "createdAt": "2025-03-30T07:11:33",
+      "updatedAt": "2025-04-05T00:14:03.175Z",
+      "author": "Lucas Lima"
+    },
+    {
+      "id": "76396dd3-9581-43b5-856d-fe1a78714e8c",
+      "title": "Os desafios do trabalho remoto moderno",
+      "slug": "os-desafios-do-trabalho-remoto-moderno",
+      "excerpt": "Ele surgiu como uma solução para simplificar tarefas comuns que os desenvolvedores enfrentam ao criar sites e aplicações.",
+      "content": "Ele surgiu como uma solução para simplificar tarefas comuns que os desenvolvedores enfrentam ao criar sites e aplicações.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&q=80",
+      "published": true,
+      "createdAt": "2025-03-08T13:13:13",
+      "updatedAt": "2025-03-08T13:13:13",
+      "author": "João Silva"
+    },
+    {
+      "id": "bf5c7dae-06a4-4155-9c01-a56e02956496",
+      "title": "Como manter o foco no mundo digital",
+      "slug": "como-manter-o-foco-no-mundo-digital",
+      "excerpt": "Next.js é um framework de desenvolvimento criado para facilitar a construção de aplicações web modernas usando React.",
+      "content": "Next.js é um framework de desenvolvimento criado para facilitar a construção de aplicações web modernas usando React.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+      "published": true,
+      "createdAt": "2025-02-22T04:32:54",
+      "updatedAt": "2025-02-22T04:32:54",
+      "author": "Ana Costa"
+    },
+    {
+      "id": "bc9a540f-66a9-4ab0-8d50-6216ab1cac53",
+      "title": "O papel do silêncio em uma vida criativa",
+      "slug": "o-papel-do-silencio-em-uma-vida-criativa",
+      "excerpt": "Isso deixa o fluxo de trabalho mais natural, especialmente para quem já está acostumado com a estrutura de pastas e arquivos.",
+      "content": "Isso deixa o fluxo de trabalho mais natural, especialmente para quem já está acostumado com a estrutura de pastas e arquivos.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
+      "published": true,
+      "createdAt": "2025-02-11T20:59:30",
+      "updatedAt": "2025-02-11T20:59:30",
+      "author": "Thiago Ribeiro"
+    },
+    {
+      "id": "3993fcf7-2490-48ed-be2e-58c2030ee764",
+      "title": "Organização pessoal: por onde começar",
+      "slug": "organizacao-pessoal-por-onde-comecar",
+      "excerpt": "Por exemplo, ele pode dividir o código em partes menores para que o navegador só carregue o que for necessário.",
+      "content": "Por exemplo, ele pode dividir o código em partes menores para que o navegador só carregue o que for necessário.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      "published": true,
+      "createdAt": "2025-01-15T04:54:26",
+      "updatedAt": "2025-01-15T00:54:26",
+      "author": "Bianca Rocha"
+    },
+    {
+      "id": "be3f14a1-0105-4e2e-bfc9-133a05e7bda6",
+      "title": "10 hábitos para aumentar sua produtividade",
+      "slug": "10-habitos-para-aumentar-sua-produtividade",
+      "excerpt": "o Next.js já vem com várias decisões prontas, permitindo que você comece a desenvolver mais rapidamente.",
+      "content": "o Next.js já vem com várias decisões prontas, permitindo que você comece a desenvolver mais rapidamente.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+      "published": false,
+      "createdAt": "2025-01-07T22:54:10",
+      "updatedAt": "2025-01-07T22:54:10",
+      "author": "Carla Mendes"
+    }
+  ]
+}
