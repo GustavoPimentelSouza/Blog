@@ -3,6 +3,7 @@ import { PostModel } from '@/models/post/post-model';
 import { Heading } from '@/components/Heading';
 import { PostImageCover } from '@/components/PostImageCover';
 import { PostDate } from '@/components/PostDate';
+import { TagChips } from '@/components/TagChips';
 
 type FeaturedPostProps = {
   post: PostModel;
@@ -28,6 +29,7 @@ export function FeaturedPost({ post }: FeaturedPostProps) {
           </span>
         </div>
         <PostDate dateTime={post.createdAt} />
+        <TagChips tags={post.tags} />
         <Link href={`/post/${post.slug}`}>
           <Heading level={2} className="text-gray-900 dark:text-white leading-tight hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
             {post.title}

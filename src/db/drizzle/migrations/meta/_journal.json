@@ -15,6 +15,13 @@
       "when": 1780407297403,
       "tag": "0001_fantastic_rattler",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1780500000000,
+      "tag": "0002_add_tags",
+      "breakpoints": true
     }
   ]
 }

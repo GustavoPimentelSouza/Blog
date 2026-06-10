@@ -1,15 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Geist } from 'next/font/google';
+import { Fraunces } from 'next/font/google';
 import './globals.css';
+import { Toaster } from '@/components/Toaster';
 
-const inter = Inter({
+const geist = Geist({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-geist',
 });
 
-const playfair = Playfair_Display({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-fraunces',
 });
 
 export const metadata: Metadata = {
@@ -31,9 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='pt-BR' className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${inter.className} bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors`}>
+    <html lang='pt-BR' className={`${geist.variable} ${fraunces.variable}`}>
+      <body className={`${geist.className} bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors antialiased`}>
         {children}
+        <Toaster />
       </body>
     </html>
   );

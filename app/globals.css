@@ -1,5 +1,15 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 h1, h2 {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-fraunces), serif;
+}
+
+/* Placeholder do Tiptap */
+.tiptap p.is-editor-empty:first-child::before {
+  color: theme(--color-gray-400);
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
 }

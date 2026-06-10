@@ -1,5 +1,5 @@
-import { InferInsertModel, InferSelectModel } from 'drizzle-orm';
-import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { InferInsertModel, InferSelectModel, relations } from 'drizzle-orm';
+import { integer, primaryKey, sqliteTable, text } from 'drizzle-orm/sqlite-core';
 
 export const postsTable = sqliteTable('posts', {
   id: text('id').primaryKey(),
@@ -26,3 +26,33 @@ export const usersTable = sqliteTable('users', {
 
 export type UsersTableSelectMode = InferSelectModel<typeof usersTable>;
 export type UsersTableInsertMode = InferInsertModel<typeof usersTable>;
+
+export const tagsTable = sqliteTable('tags', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  slug: text('slug').notNull().unique(),
+  createdAt: text('created_at').notNull(),
+});
+
+export type TagsTableSelectMode = InferSelectModel<typeof tagsTable>;
+export type TagsTableInsertMode = InferInsertModel<typeof tagsTable>;
+
+export const postTagsTable = sqliteTable('post_tags', {
+  postId: text('post_id').notNull().references(() => postsTable.id, { onDelete: 'cascade' }),
+  tagId: text('tag_id').notNull().references(() => tagsTable.id, { onDelete: 'cascade' }),
+}, (table) => [
+  primaryKey({ columns: [table.postId, table.tagId] }),
+]);
+
+export const postsRelations = relations(postsTable, ({ many }) => ({
+  postTags: many(postTagsTable),
+}));
+
+export const tagsRelations = relations(tagsTable, ({ many }) => ({
+  postTags: many(postTagsTable),
+}));
+
+export const postTagsRelations = relations(postTagsTable, ({ one }) => ({
+  post: one(postsTable, { fields: [postTagsTable.postId], references: [postsTable.id] }),
+  tag: one(tagsTable, { fields: [postTagsTable.tagId], references: [tagsTable.id] }),
+}));

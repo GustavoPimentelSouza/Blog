@@ -22,6 +22,10 @@ db.sqlite3
 # production
 /build
 
+# user uploads (keep directory via .gitkeep)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
 # misc
 .DS_Store
 *.pem

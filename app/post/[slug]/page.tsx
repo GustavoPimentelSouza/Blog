@@ -7,6 +7,7 @@ import { Heading } from '@/components/Heading';
 import { PostDate } from '@/components/PostDate';
 import { ShareButtons } from '@/components/ShareButtons';
 import { Footer } from '@/components/Footer';
+import { TagChips } from '@/components/TagChips';
 
 export const revalidate = 60;
 
@@ -64,7 +65,7 @@ export default async function PostSlugPage({ params }: PostSlugPageProps) {
 
       <main className="max-w-3xl mx-auto px-4 py-8 md:py-16">
         {post.coverImageUrl && (
-          <div className="relative w-full h-64 md:h-[480px] rounded-2xl overflow-hidden mb-10">
+          <div className="relative w-full h-64 md:h-120 rounded-2xl overflow-hidden mb-10">
             <Image
               src={post.coverImageUrl}
               alt={post.title}
@@ -89,9 +90,12 @@ export default async function PostSlugPage({ params }: PostSlugPageProps) {
           </div>
         </div>
 
-        <div className="text-gray-700 dark:text-gray-300 text-lg leading-[1.9] whitespace-pre-line">
-          {post.content}
-        </div>
+        <div
+          className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-code:before:content-none prose-code:after:content-none"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+
+        <TagChips tags={post.tags} className="mt-10 pt-10 border-t border-gray-100 dark:border-gray-800" />
 
         <ShareButtons
           title={post.title}
